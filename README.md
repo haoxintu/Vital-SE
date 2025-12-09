@@ -1,4 +1,4 @@
-## Replication package of the paper "Vital: Vulnerability-oriented Symbolic Execution via Type-unsafe Pointer-guided Monte Carlo Tree Search" (Under Review)
+## Replication package of the paper "Vital: Vulnerability-oriented Symbolic Execution via Type-unsafe Pointer-guided Monte Carlo Tree Search" (Accepted in TOSEM'25)
 
 ## This repository includes two parts:
 
