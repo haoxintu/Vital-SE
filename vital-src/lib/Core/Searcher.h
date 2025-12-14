@@ -22,6 +22,7 @@
 #include <queue>
 #include <set>
 #include <vector>
+#include <stack>
 
 extern bool is_simuation_mode; // THX
 extern bool exit_simulation_run; // THX

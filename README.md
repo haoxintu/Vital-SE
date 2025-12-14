@@ -10,12 +10,14 @@
 
 * With the tutorial on building the **Vital** in the following instructions
 
-## Quick installation
+## Setpup Instructions
+
+
 
 To install **Vital**, users could execute 
 
 ```
-git clone https://github.com/AnonyGiit/Vital-SE
+git clone https://github.com/haoxintu/Vital-SE
 cd Vital-SE
 ./setup.sh
 ```
@@ -102,19 +104,17 @@ make -j12
 ### Build `Vital`
 
 ```
-git clone https://github.com/AnonyGiit/Vital-SE
-cd vital-src
-mkdir build
-cd build
+git clone https://github.com/haoxintu/Vital-SE
+mkdir build-vital-se
+cd build-vital-se
 cmake \
     -DENABLE_SOLVER_STP=ON \
     -DENABLE_POSIX_RUNTIME=ON \
-    -DENABLE_KLEE_UCLIBC=ON \
     -DKLEE_UCLIBC_PATH=<klee_uclibc_dir> \
     -DLLVM_CONFIG_BINARY=<llvm_build_dir>/bin/llvm-config \
     -DLLVMCC=<llvm_build_dir>/bin/clang \
-    -DLLVMCXX=<llvm_build_dir>/bin/clang++
-make -j4
+    -DLLVMCXX=<llvm_build_dir>/bin/clang++ ../Vital-SE/vital-src
+make -j12
 ```
 
 After this, you could find the executable `klee` that supports `Vital` approach inside `build/bin`.

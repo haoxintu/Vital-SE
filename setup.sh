@@ -55,11 +55,14 @@ make -j12
 cd ..
 
 ## build vital
-cd vital-src
-mkdir build
-cd build
-cmake -DENABLE_SOLVER_STP=ON -DENABLE_POSIX_RUNTIME=ON -DENABLE_KLEE_UCLIBC=ON -DKLEE_UCLIBC_PATH=../klee-uclibc \
-    -DLLVM_CONFIG_BINARY=/usr/bin/llvm-config-11 -DLLVMCC=/usr/bin/clang-11 -DLLVMCXX=/usr/bin/clang++-11 -DCMAKE_BUILD_TYPE=Debug ..
+git clone https://github.com/haoxintu/Vital-SE
+mkdir build-vital-se
+cd build-vital-se
+cmake \
+    -DENABLE_SOLVER_STP=ON \
+    -DENABLE_POSIX_RUNTIME=ON \
+    -DKLEE_UCLIBC_PATH=<klee_uclibc_dir> \
+    -DLLVM_CONFIG_BINARY=<llvm_build_dir>/bin/llvm-config \
+    -DLLVMCC=<llvm_build_dir>/bin/clang \
+    -DLLVMCXX=<llvm_build_dir>/bin/clang++ ../Vital-SE/vital-src
 make -j12
-sudo make install
-cd ..

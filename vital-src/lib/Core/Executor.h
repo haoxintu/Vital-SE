@@ -622,7 +622,7 @@ public:
   double getSimulationReward(std::set<llvm::Instruction*> current_record, ExecutionState* state);
   void collectInstructionsInSimulation(llvm::Instruction*);
   void doBackpropagation(double reward, PTreeNode* node);
-  std::map<std::string, unsigned long long> getUnsafeMemoryOperationRecords();
+  std::map<std::string, unsigned long long> getUnsafeMemoryOperationRecords() override;
   double simulationReward;
   std::map<std::string, std::vector<double>> simulatedHistory; // three elelements in the history: [0] reward; [1] repeated_time; [2] visited_time
 };

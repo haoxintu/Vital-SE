@@ -5240,7 +5240,7 @@ void Executor::startSimulationState(ExecutionState &state, SimulationInfo* simul
   simulationState->setDependentState(&state);
 
   // set simulation information
-  simulationState->setSimulationInfo(simulationInfo);s
+  simulationState->setSimulationInfo(simulationInfo);
 
   /* TODO: update prevPC? */
   simulationState->pc = simulationState->prevPC;
